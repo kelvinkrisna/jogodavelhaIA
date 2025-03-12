@@ -18,12 +18,12 @@
             <div class="campo-dificuldade">
                 <label>Nível de Dificuldade:</label>
                 <div class="botoes-dificuldade">
-                    <button class="btn-dificuldade" data-nivel="facil">Fácil</button>
-                    <button class="btn-dificuldade ativo" data-nivel="normal">Normal</button>
-                    <button class="btn-dificuldade" data-nivel="dificil">Difícil</button>
+                    <button type="button" class="btn-dificuldade" data-nivel="facil">Fácil</button>
+                    <button type="button" class="btn-dificuldade ativo" data-nivel="normal">Normal</button>
+                    <button type="button" class="btn-dificuldade" data-nivel="dificil">Difícil</button>
                 </div>
             </div>
-            <button id="comecar-jogo">Começar Jogo</button>
+            <button type="button" id="comecar-jogo">Começar Jogo</button>
         </div>
     </div>
 
@@ -31,7 +31,10 @@
         <h1>Jogo da Velha</h1>
         <div class="painel-superior">
             <div class="placar">
-                <h3>Placar</h3>
+                <div class="placar-header">
+                    <h3>Placar</h3>
+                    <button type="button" id="zerar-placar" title="Zerar Placar">↺</button>
+                </div>
                 <div class="resultados">
                     <div class="resultado-item">
                         <span class="jogador-nome">Você</span>: <span id="vitorias-jogador">0</span>
@@ -46,7 +49,7 @@
             </div>
             <div class="controles">
                 <div class="nivel-atual">
-                    <label>Nível:</label>
+                    <label for="mudar-nivel">Nível:</label>
                     <select id="mudar-nivel">
                         <option value="facil">Fácil</option>
                         <option value="normal" selected>Normal</option>
@@ -56,8 +59,8 @@
             </div>
         </div>
         <div class="modo-jogo">
-            <button id="modo-ia" class="ativo">Jogador vs HAL-9000</button>
-            <button id="modo-pvp" disabled>Jogador vs Jogador (Em breve)</button>
+            <button type="button" id="modo-ia" class="ativo">Jogador vs HAL-9000</button>
+            <button type="button" id="modo-pvp" disabled>Jogador vs Jogador (Em breve)</button>
         </div>
         <div class="mensagem-erro"></div>
         <div class="tabuleiro">
@@ -72,7 +75,7 @@
             <div class="celula" data-index="8"></div>
         </div>
         <div class="status">Aguardando início do jogo...</div>
-        <button id="reiniciar">Reiniciar Jogo</button>
+        <button type="button" id="reiniciar">Reiniciar Jogo</button>
     </div>
     <script src="script.js"></script>
 </body>

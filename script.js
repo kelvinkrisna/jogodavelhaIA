@@ -13,6 +13,11 @@ class JogoDaVelha {
             'dificil': 0.1   // 10% de chance de erro
         };
         this.ultimaJogadaFoiErro = false;
+        this.placar = {
+            jogador: 0,
+            ia: 0,
+            empates: 0
+        };
 
         // Elementos do DOM
         this.celulas = document.querySelectorAll('.celula');
@@ -31,7 +36,7 @@ class JogoDaVelha {
         this.spanEmpates = document.getElementById('empates');
         this.btnZerarPlacar = document.getElementById('zerar-placar');
 
-        // Desabilitar o tabuleiro até que o jogador insira seu nome
+        // Desabilitar apenas o tabuleiro até que o jogador insira seu nome
         this.celulas.forEach(celula => celula.style.pointerEvents = 'none');
 
         // Inicializar eventos
