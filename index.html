@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="dialogo-nome" class="dialogo">
+        <div class="dialogo-conteudo">
+            <h2>Bem-vindo ao Jogo da Velha!</h2>
+            <p>Você jogará contra HAL-9000</p>
+            <div class="campo-nome">
+                <label for="nome-jogador">Seu nome:</label>
+                <input type="text" id="nome-jogador" placeholder="Digite seu nome" maxlength="20">
+            </div>
+            <div class="campo-dificuldade">
+                <label>Nível de Dificuldade:</label>
+                <div class="botoes-dificuldade">
+                    <button class="btn-dificuldade" data-nivel="facil">Fácil</button>
+                    <button class="btn-dificuldade ativo" data-nivel="normal">Normal</button>
+                    <button class="btn-dificuldade" data-nivel="dificil">Difícil</button>
+                </div>
+            </div>
+            <button id="comecar-jogo">Começar Jogo</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Jogo da Velha</h1>
+        <div class="painel-superior">
+            <div class="placar">
+                <h3>Placar</h3>
+                <div class="resultados">
+                    <div class="resultado-item">
+                        <span class="jogador-nome">Você</span>: <span id="vitorias-jogador">0</span>
+                    </div>
+                    <div class="resultado-item">
+                        <span>HAL-9000</span>: <span id="vitorias-ia">0</span>
+                    </div>
+                    <div class="resultado-item">
+                        <span>Empates</span>: <span id="empates">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="controles">
+                <div class="nivel-atual">
+                    <label>Nível:</label>
+                    <select id="mudar-nivel">
+                        <option value="facil">Fácil</option>
+                        <option value="normal" selected>Normal</option>
+                        <option value="dificil">Difícil</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="modo-jogo">
+            <button id="modo-ia" class="ativo">Jogador vs HAL-9000</button>
+            <button id="modo-pvp" disabled>Jogador vs Jogador (Em breve)</button>
+        </div>
+        <div class="mensagem-erro"></div>
+        <div class="tabuleiro">
+            <div class="celula" data-index="0"></div>
+            <div class="celula" data-index="1"></div>
+            <div class="celula" data-index="2"></div>
+            <div class="celula" data-index="3"></div>
+            <div class="celula" data-index="4"></div>
+            <div class="celula" data-index="5"></div>
+            <div class="celula" data-index="6"></div>
+            <div class="celula" data-index="7"></div>
+            <div class="celula" data-index="8"></div>
+        </div>
+        <div class="status">Aguardando início do jogo...</div>
+        <button id="reiniciar">Reiniciar Jogo</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
